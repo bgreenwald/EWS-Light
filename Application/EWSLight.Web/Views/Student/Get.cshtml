@@ -1,0 +1,40 @@
+﻿@using EWSLight.Web.Models
+@model StudentModel
+@{
+    ViewBag.Title = "Student Overview";
+}
+<div class="container" id="main">
+    <h3>Early Warning System</h3>
+    <h4>Student Overview</h4>
+    <div class="well student-header">
+        <div class="student-header-image" style="background: url('@Model.ThumbnailUrl') no-repeat;">
+        </div>
+        <div class="student-header-name-grade">
+            <h2>@Model.FullName</h2>
+            <h5>#@Model.StudentId</h5>
+            <h5 class="hidden-xs">@Model.GradeLevel</h5>
+        </div>
+        <div class="student-header-status">
+            <div class="student-header-status-text hidden-xs">
+                <h3 class="status-fail-text">@Model.Status.StatusHeader</h3>
+                <span class="status-fail-desc">@Model.Status.StatusMessage</span>
+            </div>
+            <div class="student-header-status-icon">
+                @Html.Partial("_IndicatorIcon", Model.Status.OverallStatus)
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <h4 class="indicator-header">Indicators</h4>
+
+    <div class="row">
+        @foreach (var indicator in Model.Indicators)
+        {
+            @Html.Partial("_Indicator", indicator)
+        }
+    </div>
+</div>

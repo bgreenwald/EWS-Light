@@ -1,0 +1,8 @@
+﻿@using EWSLight.Web.Models
+@model StatusType
+@{
+    var status = Model == StatusType.Ok ? "status-success" : "status-fail";
+    var statusIcon = Model == StatusType.Ok ? "fa-check" : "fa-exclamation-triangle";
+}
+<i class="fa @statusIcon fa-2x pull-right fa-inverse status-icon @status"></i>
+

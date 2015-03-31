@@ -1,0 +1,25 @@
+﻿@using System.IdentityModel.Protocols.WSTrust
+@model EWSLight.Web.Models.IndicatorModel
+
+@{
+    var icon = Model.Icon;
+}
+
+<div class="col-sm-6 col-lg-4">
+    <div class="well indicator-well clearfix">
+        <div class="indicator-icon-container indicator-nopad">
+            <i class="fa @icon fa-2x fa-inverse indicator-icon"></i>
+        </div>
+        <div class="indicator-text-container indicator-nopad">
+            <h4>@Model.HeaderText</h4>
+            <span>@Model.Value</span>
+            @if (Model.MoreInfo != null)
+            {
+                <i class="fa fa-info fa-inverse more-info" data-toggle="popover" data-trigger="hover" data-delay="200" title="@Model.MoreInfo.Title" data-content="@Model.MoreInfo.Description"></i>
+            }
+        </div>
+        <div class="indicator-status-container indicator-nopad">
+            @Html.Partial("_IndicatorIcon", Model.Status)
+        </div>
+    </div>
+</div>
