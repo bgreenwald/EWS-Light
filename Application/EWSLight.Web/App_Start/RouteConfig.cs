@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
-using System.Web.UI.WebControls;
 
 namespace EWSLight.Web
 {
@@ -14,8 +10,14 @@ namespace EWSLight.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                 name: "Student_List",
+                url: "Students",
+                defaults: new { controller = "Student", action = "List" }
+                );
+
+            routes.MapRoute(
                 name: "Student_Default",
-                url: "Student/{id}",
+                url: "Students/{id}",
                 defaults: new {controller = "Student", action = "Get"}
                 );
 

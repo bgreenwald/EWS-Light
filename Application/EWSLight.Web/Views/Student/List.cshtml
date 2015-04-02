@@ -1,0 +1,160 @@
+﻿@model System.Collections.Generic.List<EWSLight.Web.Models.StudentModel>
+@{
+    ViewBag.Title = "List";
+}
+
+@section styles
+{
+    @Styles.Render("~/Content/dataTablescss")
+}
+
+<div class="container" id="main">
+    <h3>Early Warning System</h3>
+    <h4>Student List</h4>
+    
+    <table id="studentDataTable" class="cell-border stripe header-border">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th class="filter">Grade Level</th>
+                <th class="filter"># EWS Indicators Failing</th>
+                <th>Attendance</th>
+                <th>Suspensions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <div class="student-list-image">
+                </div>
+                Jerry Garza
+            </td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Gonzo</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>4</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jerry Garza</td>
+            <td>6th</td>
+            <td>3</td>
+            <td>75%</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+            </tbody>
+    </table>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/dataTables")
+    <script language="javascript">
+        $(function() {
+            $('#studentDataTable').dataTable({
+                "columnDefs": [
+                    { "orderable": false, "targets":5 }
+                ],
+                "sPaginationType": "full_numbers",
+                initComplete: function () {
+                    var api = this.api();
+                    api.columns('.filter').indexes().flatten().each(function (i) {
+                        var column = api.column(i);
+                        $(column.header()).append("<br/>");
+                        var select = $('<select style="width:100%"><option value=""></option></select>')
+                            .appendTo($(column.header()))
+                            .on('change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+
+                                column
+                                    .search(val ? '^' + val + '$' : '', true, false)
+                                    .draw();
+                            });
+
+                        column.data().unique().sort().each(function (d, j) {
+                            select.append('<option value="' + d + '">' + d + '</option>');
+                        });
+                    });
+                }
+            });
+        });
+    
+    </script>
+}
+

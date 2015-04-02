@@ -10,6 +10,9 @@ namespace EWSLight.Web
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/dataTables").Include(
+                        "~/Scripts/jquery.dataTables.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -28,7 +31,10 @@ namespace EWSLight.Web
                 "~/Content/site.css",
                 "~/Content/font-awesome.css"));
 
-            BundleTable.EnableOptimizations = true;
+            bundles.Add(new StyleBundle("~/Content/dataTablescss").Include(
+                "~/Content/jquery.dataTables.css"));
+
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }

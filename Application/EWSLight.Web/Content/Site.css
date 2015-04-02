@@ -77,6 +77,17 @@ textarea {
             margin-right: 10px;
             text-align: right;
         }
+        .student-list-image {
+            float: left;
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            border-radius: 14px;
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 12px;
+            background-size: contain;
+            background: url('Images/Students/15MaleWhiteList.png') no-repeat;
+        }
         .indicator-icon-container {
             float: left;
             min-width: 30px;
@@ -142,4 +153,11 @@ textarea {
             padding:3px;
             text-align: center;
         }
-
+        table.header-border thead th:first-child {
+            border-left: 1px solid #dddddd;
+        }
+        table.header-border thead th {
+            border-top: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+        }
+ 
