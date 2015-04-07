@@ -11,112 +11,173 @@
 <div class="container" id="main">
     <h3>Early Warning System</h3>
     <h4>Student List</h4>
-    
+    <div class="filter_section">
+        <label class="filter-label">
+            # Indicators:
+        </label>
+        <label>
+            <input type="checkbox" id="indicatorsgte2" name="indicatorsgte2" />2 or more
+        </label>
+    </div>
+    <div id="grade_level" class="filter_section">
+        <label class="filter-label">Grade Level:</label>
+    </div>
     <table id="studentDataTable" class="cell-border stripe header-border">
         <thead>
             <tr>
                 <th>Name</th>
-                <th class="filter">Grade Level</th>
-                <th class="filter"># EWS Indicators Failing</th>
+                <th>Grade Level</th>
+                <th># EWS Indicators Failing</th>
                 <th>Attendance</th>
                 <th>Suspensions</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>
-                <div class="student-list-image">
-                </div>
-                Jerry Garza
-            </td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Gonzo</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>4</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Jerry Garza</td>
-            <td>6th</td>
-            <td>3</td>
-            <td>75%</td>
-            <td>-</td>
-            <td></td>
-        </tr>
-            </tbody>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/01FemaleAmericanIndianList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-success"></div>
+                    Nancy Drew
+                </td>
+                <td>1st</td>
+                <td>1</td>
+                <td>75%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/02FemaleWhiteList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Kim Jones
+                </td>
+                <td>6th</td>
+                <td>2</td>
+                <td>95%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/04FemaleBlackList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Grace Smith
+                </td>
+                <td>6th</td>
+                <td>3</td>
+                <td>85%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/03MaleWhiteList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Jerry Garza
+                </td>
+                <td>6th</td>
+                <td>4</td>
+                <td>73%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/ES-10WhiteFemaleList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Tara Abbott
+                </td>
+                <td>3rd</td>
+                <td>3</td>
+                <td>92%</td>
+                <td>Yes</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/06MaleWhiteList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Mike Bell
+                </td>
+                <td>6th</td>
+                <td>2</td>
+                <td>65%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/08MaleWhiteList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-success"></div>
+                    Travis Green
+                </td>
+                <td>7th</td>
+                <td>1</td>
+                <td>79%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/07FemaleWhiteList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Lisa Haddon
+                </td>
+                <td>6th</td>
+                <td>4</td>
+                <td>81%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/09FemaleWhiteList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Sherri Davis
+                </td>
+                <td>2nd</td>
+                <td>4</td>
+                <td>91%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/11FemaleBlackList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    Faye Donavan
+                </td>
+                <td>5th</td>
+                <td>4</td>
+                <td>94%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="student-list-image" style="background: url('/Content/Images/Students/10MaleWhiteList.png') no-repeat">
+                    </div>
+                    <div class="student-list-status student-list-fail"></div>
+                    John Gonzalez
+                </td>
+                <td>4th</td>
+                <td>3</td>
+                <td>83%</td>
+                <td>-</td>
+                <td class="dt-body-center"><a class="btn btn-info" href="/Students/12345">View Detail</a></td>
+            </tr>
+        </tbody>
     </table>
 </div>
 
@@ -124,37 +185,59 @@
 {
     @Scripts.Render("~/bundles/dataTables")
     <script language="javascript">
+
+
         $(function() {
-            $('#studentDataTable').dataTable({
+
+            $('#studentDataTable').DataTable({
                 "columnDefs": [
-                    { "orderable": false, "targets":5 }
+                    { "orderable": false, "targets": 5 }
                 ],
                 "sPaginationType": "full_numbers",
-                initComplete: function () {
+                initComplete: function() {
                     var api = this.api();
-                    api.columns('.filter').indexes().flatten().each(function (i) {
-                        var column = api.column(i);
-                        $(column.header()).append("<br/>");
-                        var select = $('<select style="width:100%"><option value=""></option></select>')
-                            .appendTo($(column.header()))
-                            .on('change', function () {
-                                var val = $.fn.dataTable.util.escapeRegex(
-                                    $(this).val()
-                                );
-
-                                column
-                                    .search(val ? '^' + val + '$' : '', true, false)
-                                    .draw();
-                            });
-
-                        column.data().unique().sort().each(function (d, j) {
-                            select.append('<option value="' + d + '">' + d + '</option>');
-                        });
+                    var gradeLevel = $('#grade_level');
+                    api.column(1).data().unique().sort().each(function(d, j) {
+                        gradeLevel.append('<label class="grade_level"><input type="checkbox" name="grade" value="' + d + '"/>' + d + '</label>');
                     });
                 }
             });
+
+            $.fn.dataTable.ext.search.push(
+                function(settings, data, dataIndex) {
+                    var shouldFilterIndicators = $('#indicatorsgte2').is(':checked');
+
+                    var gradeLevels = $('input[name="grade"]:checked').map(function() { return $(this).val(); }).get();
+
+                    var shouldFilterGradeLevels = gradeLevels.length > 0;
+
+                    if (!shouldFilterIndicators && !shouldFilterGradeLevels)
+                        return true;
+
+                    var indicators = parseFloat(data[2]) || 0; // use data for the indicators column
+
+                    var validGradeLevel = ($.inArray(data[1], gradeLevels) > -1);
+
+                    if (shouldFilterIndicators && indicators < 2)
+                        return false;
+
+                    if (shouldFilterGradeLevels && !validGradeLevel)
+                        return false;
+
+                    return true;
+                });
+
+            var table = $('#studentDataTable').DataTable();
+            // Event listener to the two range filtering inputs to redraw on input
+            $('#indicatorsgte2').change(function() {
+                table.draw();
+            });
+
+            $('input[name="grade"]').change(function() {
+                table.draw();
+            });
+
         });
-    
     </script>
 }
 

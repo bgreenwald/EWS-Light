@@ -84,10 +84,33 @@ textarea {
             min-width: 28px;
             border-radius: 14px;
             -webkit-border-radius: 14px;
-            -moz-border-radius: 12px;
+            -moz-border-radius: 14px;
             background-size: contain;
-            background: url('Images/Students/15MaleWhiteList.png') no-repeat;
+            display: inline-block;
         }
+        .student-list-status {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            margin-right: 4px;
+            box-shadow: -1px 1px #FFFFFF; 
+            -moz-box-shadow: -1px 1px #FFFFFF;
+            -webkit-box-shadow: -1px 1px #FFFFFF;
+            -o-box-shadow: -1px 1px #FFFFFF; 
+            position: relative;
+            left: -5px;
+        }
+        .student-list-fail {
+            background-color: #ee0000;
+        }
+        .student-list-success {
+            background-color: #008000;
+        }
+
+
         .indicator-icon-container {
             float: left;
             min-width: 30px;
@@ -159,5 +182,19 @@ textarea {
         table.header-border thead th {
             border-top: 1px solid #dddddd;
             border-right: 1px solid #dddddd;
+        }
+        .filter_section {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            min-height: 35px;
+            padding: 5px;
+            border: 1px solid #dddddd;
+        }
+        .filter-label {
+            margin-right: 10px;
+        }
+        label.grade_level {
+            margin-right: 10px;
         }
  

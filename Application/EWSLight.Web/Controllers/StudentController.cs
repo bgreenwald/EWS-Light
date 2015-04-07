@@ -90,7 +90,7 @@ namespace EWSLight.Web.Controllers
                 ThumbnailUrl = "/Content/Images/taraabbott.jpg",
                 FullName = "Tara D Abbott",
                 StudentId = id,
-                GradeLevel = "7th Grade",
+                GradeLevel = "3rd Grade",
                 Status = new StatusModel
                 {
                     StatusHeader = "Warning!",
